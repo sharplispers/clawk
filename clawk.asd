@@ -1,6 +1,7 @@
 (asdf:defsystem clawk
-  :version "0"
+  :version "1"
   :description "Common Lisp AWK"
+  :maintainer "Michael Weber <michaelw@foldr.org>"
   :author "Michael Parker <mparker762@hotmail.com>"
   :licence "BSD-style"
   :depends-on (regex)
