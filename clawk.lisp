@@ -32,7 +32,7 @@
                        (setq symname (concatenate 'string symname (string c) (string c2))))
                       (t (setq symname (concatenate 'string symname (string c2)))))))
              ((or (char= c #\Return) (char= c #\Newline))
-              (error "Unterminated regular expression: " symname))
+              (error "Unterminated regular expression: #/~S" symname))
              (t (setq symname (concatenate 'string symname (string c)))))))))
 
 (defun install-regex-syntax ()
@@ -56,7 +56,7 @@
                       (t (princ c cmdname-strm)
                          (princ c2 cmdname-strm)))))
              ((or (char= c #\Return) (char= c #\Newline))
-              (error "Unterminated shell command: " (get-output-stream-string cmdname-strm)))
+              (error "Unterminated shell command: #`~S" (get-output-stream-string cmdname-strm)))
              (t (princ c cmdname-strm)))))))
 
 (defun install-cmd-syntax ()
