@@ -47,10 +47,10 @@
     ;; still stand out visually, so I think the goal of that convention
     ;; is still met
     "$N" "$0" "$1" "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9" "$10"
-    "$11" "$12" "$13" "$14" "$15" "$16" "$17" "$18" "$19" "$20"
+    "$11" "$12" "$13" "$14" "$15" "$16" "$17" "$18" "$19" "$20" "$NF"
     ;; Fields access, as numbers
     "$#N" "$#0" "$#1" "$#2" "$#3" "$#4" "$#5" "$#6" "$#7" "$#8" "$#9" "$#10"
-    "$#11" "$#12" "$#13" "$#14" "$#15" "$#16" "$#17" "$#18" "$#19" "$#20"
+    "$#11" "$#12" "$#13" "$#14" "$#15" "$#16" "$#17" "$#18" "$#19" "$#20" "$#NF"
     ;; Coercion routines, although the generic functions above reduce
     ;; the need for them.
     "STR" "NUM" "INT"

@@ -148,6 +148,7 @@
 (define-symbol-macro $18 ($n 18))
 (define-symbol-macro $19 ($n 19))
 (define-symbol-macro $20 ($n 20))
+(define-symbol-macro $NF ($n (1- *NF*)))
 
 (define-symbol-macro $#0 ($#n 0))
 (define-symbol-macro $#1 ($#n 1))
@@ -170,6 +171,7 @@
 (define-symbol-macro $#18 ($#n 18))
 (define-symbol-macro $#19 ($#n 19))
 (define-symbol-macro $#20 ($#n 20))
+(define-symbol-macro $#NF ($#n (1- *NF*)))
 
 
 
