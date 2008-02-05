@@ -112,7 +112,7 @@
 (defvar *CURFILE*)
 (defvar *CURLINE* "")
 (defvar *FS-IS-WS* t)
-(defconstant +WS-FIELDSEP-PAT+ "[ \\t]+")
+(regex::define-constant +WS-FIELDSEP-PAT+ "[ \\t]+")
 (defvar *FS* +WS-FIELDSEP-PAT+)
 (defvar *RSTART* 0)
 (defvar *RLENGTH* 0)
