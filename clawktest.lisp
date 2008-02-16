@@ -176,3 +176,36 @@
 ; even more like awk
 (defawk test-1-17-3-2 ()
   (t ($print ($n *NF*))))
+
+;;;; Tests for bugs
+(defawk test/1 ()
+  (t
+   (return-from test/1 (list $1 $2))))
+
+(defawk test/2 ()
+  (BEGIN
+   (setf *FS* ","))
+  (t
+   (return-from test/2 (list $1 $2))))
+
+#||
+(assert
+ (equal (with-input-from-string (s "  one two")
+          (test/1 s))
+        '("one" "two")))
+
+(assert
+ (equal (with-input-from-string (s "one two")
+          (test/1 s))
+        '("one" "two")))
+
+(assert
+ (equal (with-input-from-string (s "one,  two  ,")
+          (test/2 s))
+        '("one" "  two  ")))
+
+(assert
+ (equal (with-input-from-string (s ",  one, two")
+          (test/2 s))
+        '("" "  one")))
+||#

@@ -1,5 +1,5 @@
 (asdf:defsystem clawk
-  :version "1"
+  :version "2"
   :description "Common Lisp AWK"
   :maintainer "Michael Weber <michaelw@foldr.org>"
   :author "Michael Parker <mparker762@hotmail.com>"

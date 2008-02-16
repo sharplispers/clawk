@@ -341,13 +341,14 @@
 ;;; *CURLINE* and set *FIELDS* and the various $n variables.
 ;;;
 (defun split (&optional (source nil not-splitting-curline)
-                        (fieldsep-pattern (FS) fieldsep-pattern-p))
+              (fieldsep-pattern (FS))
+              include-empty-leading-and-trailing-fields)
   "Split a string up into a list of multiple fields based on
    the field-separator pattern."
   (let ((push-empty-leading-and-trailing-segments
-         (or fieldsep-pattern-p
+         (or include-empty-leading-and-trailing-fields
              (not *fs-is-ws*)
-             (and (stringp fieldsep-pattern) (string= fieldsep-pattern +WS-FIELDSEP-PAT+)))))
+             (not (and (stringp fieldsep-pattern) (string= fieldsep-pattern +WS-FIELDSEP-PAT+))))))
     (when (or (null source) (eq source *CURLINE*))
       (setf source *CURLINE*
             not-splitting-curline nil))
