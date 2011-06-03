@@ -151,7 +151,7 @@
       ($print line)
       (loop for i from 1 by 1
 	    while ($<= i years)
-	    do (format t "~%~t~.2F" ($* amount ($expt ($+ 1 rate) i)))))))
+	    do (format t "~%~t~,2F" ($* amount ($expt ($+ 1 rate) i)))))))
 
 (defun test-1-16-2-1 (filename &aux lines)
   "Print lines in reverse order"
