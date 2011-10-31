@@ -8,6 +8,6 @@ Michael Weber patched it to make it compile again; his version is here:
 This version was created by Zach Beane to fix an SBCL compile-time
 warning about a bogus format string.
 
-https://github.com/xach/clawk
+https://github.com/sharplispers/clawk
 
-2011-06-03
+2011-10-31
