@@ -1216,16 +1216,12 @@ or of the form (THE type x) where x is side-effect-free."
   (reduce #'max (mapcar #'num rest) :initial-value (num x)))
 (defmethod $max ((x number) &rest rest)
   (reduce #'max (mapcar #'num rest) :initial-value x))
-(defmethod $max ((x string) &rest rest)
-  (reduce #'max (mapcar #'str rest) :initial-value x))
                  
 (defgeneric $min (x &rest rest))
 (defmethod $min (x &rest rest)
   (reduce #'min (mapcar #'num rest) :initial-value (num x)))
 (defmethod $min ((x number) &rest rest)
   (reduce #'min (mapcar #'num rest) :initial-value x))
-(defmethod $min ((x string) &rest rest)
-  (reduce #'min (mapcar #'str rest) :initial-value x))
 
 (defgeneric $zerop (x))
 (defmethod $zerop (x)
